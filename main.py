@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description='Rocket Simulation')
 parser.add_argument('--target', choices=['venus', 'mars', 'jupiter'], default='mars')
 parser.add_argument('--speed', type=int, default=50, help='Animation speed (ms)')
 parser.add_argument('--steps', type=int, default=200, help='Animation steps')
-parser.add_argument('--format', choices=['mp4', 'gif'], default='mp4')
+parser.add_argument('--format', choices=['mp4'], default='mp4')
 args = parser.parse_args()
 
 # Planet data
@@ -89,7 +89,7 @@ print(f"Max distance: {np.max(distance):.2f} AU")
 try:
     os.makedirs('results', exist_ok=True)
     filename = f'results/animation.{args.format}'
-    writer = 'ffmpeg' if args.format == 'mp4' else 'pillow'
+    writer = 'ffmpeg'
     anim.save(filename, writer=writer)
     
     # Export data
