@@ -1,0 +1,9 @@
+services:
+  simulation:
+    build: .
+    volumes:
+      - ./results:/app/results:rw
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MPLBACKEND=Agg
+      - MPLCONFIGDIR=/tmp/matplotlib
