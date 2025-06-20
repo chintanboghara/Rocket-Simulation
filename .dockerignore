@@ -1,7 +1,5 @@
 .git
 .gitignore
-Dockerfile
-docker-compose.yml
 results/
 venv/
 env/
@@ -9,5 +7,11 @@ env/
 .vscode/
 __pycache__/
 *.pyc
+*.pyo
 *.log
 .env
+README.md
+LICENSE
+.pytest_cache/
+*.tmp
+*.swp
