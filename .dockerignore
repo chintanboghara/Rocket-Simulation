@@ -10,8 +10,12 @@ __pycache__/
 *.pyo
 *.log
 .env
-README.md
+README_UPDATED.md
 LICENSE
 .pytest_cache/
 *.tmp
 *.swp
+*.bat
+node_modules/
+.DS_Store
+run.bat
